@@ -1,12 +1,13 @@
+{% block content %}
 
-
-{% block content1 %}
-
-<form action="{{ url_for('home') }}" method="POST">
-    {{ form.name.label() }}{{ form.name() }}<br>
-    {{ form.submit() }}
-    {{ form.hidden_tag() }}
-</form>
-
-
+This is the base template of an application that's based on RuPaul's Drag Race.
 {% endblock %}
+
+<p>------------</p>
+<h3>Navigation</h3>
+<ul>
+    <li><a href="{{ url_for('index')}}">Go to Season input form.</a></li>
+    <li><a href="{{ url_for('queens')}}">Go to Queen input form.</a></li>
+    <li><a href="{{ url_for('get_all_queens')}}">See all favorite Queens.</a></li>
+    <li><a href="{{ url_for('get_all_episodes')}}">See all Episodes.</a></li>
+</ul>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<ul>
+{% for episode in episodes %}
+  <li>Season: {{ episode.season_id}} Episode Number: {{episode.episode_number}} Title: {{episode.title}}</li><br>
+{% endfor %}
+</ul>
+
+{% if not episodes%}
+    There are no episodes to show.
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+<form method="POST">
+	{{ form.hidden_tag() }}
+	{{ form.season_number.label }}{{ form.season_number()}}
+	{{ form.submit() }}
+</form>
+</div>
+
+<br>
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>{{ message }}</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

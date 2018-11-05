@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+<form method="POST">
+  Enter the name of a Drag queen to search for:<br>
+  	{{ form.hidden_tag() }}
+  <p>{{ form.fav_queen.label }}{{ form.fav_queen() }}</p>
+  <p>{{ form.season.label }}{{ form.season() }}</p>
+  <p>{{ form.fav_quote.label }}{{ form.fav_quote() }}</p>
+  {{ form.submit() }}
+</form>
+</div>
+
+<br>
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>{{ message }}</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

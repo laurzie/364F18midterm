@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<ul>
+{% for favorite in favorites %}
+  <li>{{ favorite.favorite_queen}} Season: {{favorite.season}} Quote: {{favorite.quote}}</li><br>
+{% endfor %}
+</ul>
+
+{% if not favorites %}
+    There are no favorite queens to show.
+{% endif %}
+
+{% endblock %}
