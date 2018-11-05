@@ -2,12 +2,13 @@
 {% block content %}
 <div>
 <form method="POST">
+  <h1>Enter the name of the RuPaul's Drag Race Season you want more information on: <h1> 
 	{{ form.hidden_tag() }}
-	{{ form.season_number.label }}{{ form.season_number()}}
-	{{ form.submit() }}
+	<h2>{{ form.season_number.label }}{{ form.season_number()}}</h2>
+	<h2>{{ form.submit() }}</h2>
 </form>
 </div>
-
+<img src="https://www.pinknews.co.uk/images/2018/01/rupaul_640x345_acf_cropped.jpg">
 <br>
 <div>
 {% for message in get_flashed_messages() %}
